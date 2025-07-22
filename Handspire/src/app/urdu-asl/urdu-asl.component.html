@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<!-- Urdu to ASL Converter -->
+<h1 class="page-heading">Urdu to ASL Converter</h1>
+
+<div class="asl-container">
+  <div class="asl-left">
+    <!-- Display ASL images with letters below them -->
+    <div class="asl-display">
+      <div *ngFor="let img of displayedASLImages" class="asl-image-container">
+        <img [src]="img.image" alt="ASL {{ img.letter }}">
+        <p class="myletter">{{ img.letter }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="asl-right">
+    <!-- Urdu Alphabet Keyboard -->
+    <div class="asl-keyboard">
+      <button class="asl-btn" *ngFor="let letter of urduAlphabet" (click)="showASL(letter)">{{ letter }}</button>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="control-buttons">
+      <button class="control-btn" (click)="cutImages()">
+        <i class="fas fa-trash-alt"></i> Delete
+      </button>
+      <button class="control-btn" (click)="deleteImage()">
+        <i class="fas fa-cut"></i> Cut
+      </button>
+    </div>
+  </div>
+  
+  <!-- Audio to play the "ting" sound -->
+  <audio id="tingSound" src="assets/Tune/ting.mp3" preload="auto"></audio>
+</div>

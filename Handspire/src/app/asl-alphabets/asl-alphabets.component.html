@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="asl-container">
+  <div class="asl-text">
+    <h1>ASL Alphabets</h1>
+    <p>
+      These are ASL hand gestures that represent {{ isEnglish ? 'English' : 'Urdu' }} alphabets. Below you'll see images of each letter represented in American Sign Language.
+    </p>
+
+    <div class="btn-wrapper">
+      <button class="btn-translate" (click)="gotoEnglish()">
+        <span>English to ASL</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <button class="btn-translate" (click)="gotoUrdu()">
+        <span>Urdu to ASL</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div style="margin: 20px;">
+    <button (click)="toggleLanguage()" class="btn-translate">
+      Switch to {{ isEnglish ? 'Urdu' : 'English' }}
+    </button>
+  </div>
+
+  <div class="asl-images">
+    <div class="asl-card" *ngFor="let item of currentASL">
+      <img [src]="item.image" [alt]="item.letter" />
+      <p>{{ item.letter }}</p>
+    </div>
+  </div>
+</div>

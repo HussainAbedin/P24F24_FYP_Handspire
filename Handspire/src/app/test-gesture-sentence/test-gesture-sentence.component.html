@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Gesture Recognition</h2>
+
+  <video #video autoplay playsinline width="400" height="300"></video>
+  <br />
+
+  <button (click)="captureImageSequence()" [disabled]="capturing">
+    {{ capturing ? 'Capturing...' : 'Capture & Predict' }}
+  </button>
+
+  <div *ngIf="capturing">
+    <p>🧠 Capturing gesture, please hold your hand still...</p>
+  </div>
+
+  <div *ngIf="!capturing && result">
+    <h3>Prediction:</h3>
+    <p><strong>Gesture:</strong> {{ result.prediction }}</p>
+    <p><strong>Confidence:</strong> {{ result.confidence | percent: '1.1-2' }}</p>
+  </div>
+</div>

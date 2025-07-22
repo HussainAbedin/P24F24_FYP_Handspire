@@ -1,0 +1,100 @@
+
+.asl-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.asl-text {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+.asl-text h1 {
+  color: #1d3557;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.asl-text p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-translate {
+background: linear-gradient(135deg, #2a8bd4, #145ea8);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-translate:hover {
+  background-color: #4a41d0;
+  transform: scale(1.05);
+}
+
+/* Grid Container for Cards */
+.asl-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 950px;
+  box-sizing: border-box;
+}
+
+/* Individual Card Styling */
+.asl-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease;
+  min-height: 100px;
+}
+
+.asl-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.asl-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.asl-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}

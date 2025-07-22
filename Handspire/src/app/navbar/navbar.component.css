@@ -1,0 +1,167 @@
+/* === NAVBAR CONTAINER === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(30, 41, 59, 0.95); /* subtle glass effect */
+  backdrop-filter: blur(6px);
+  padding: 12px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  cursor: default;
+}
+
+/* === LOGO === */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ECEFF0;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-family: 'Cursive';
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.logo:hover {
+  color: #EAB308;
+  letter-spacing: 2.5px;
+}
+
+.sign-icon i {
+  font-size: 22px;
+  color: #EAB308;
+  margin-left: 6px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.sign-icon i:hover {
+  transform: scale(1.2);
+  color: #38BDF8;
+}
+
+/* === NAV LINKS === */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links li a:hover {
+  color: #38BDF8;
+  border-bottom: 2px solid #38BDF8;
+}
+
+/* === CTA BUTTON === */
+.cta-btn {
+  background: linear-gradient(90deg, #00B4DB, #0077B6);
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-left: 12px;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, #009ACD, #005f8a);
+  transform: translateY(-2px);
+}
+/* === LOGO container === */
+.logo {
+  display: flex;
+  align-items: center;                /* vertical center */
+  cursor: pointer;
+  gap: 8px;                           /* space between text & icon */
+}
+
+/* Text + tagline stacked */
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;             /* left align text */
+  line-height: 1.1;                    /* tighten vertical spacing */
+}
+
+/* Main logo text */
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ECEFF0;
+  letter-spacing: 1.5px;
+  font-family: 'Cursive';
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.logo:hover .logo-text {
+  color: #EAB308;
+  letter-spacing: 2px;
+}
+
+/* tagline under logo */
+.tagline {
+  font-size: 11px;
+  font-weight: 400;
+  color: #cbd5e1;                    /* subtle slate */
+  margin-top: 2px;
+  letter-spacing: 0.4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* hand icon on the right of text */
+.sign-icon i {
+  font-size: 28px;
+  color: #EAB308;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sign-icon i:hover {
+  transform: scale(1.2);
+  color: #38BDF8;
+}
+
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .nav-links li {
+    margin: 6px;
+  }
+
+  .cta-btn {
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,172 @@
+<!-- HTML -->
+
+<app-navbar></app-navbar>
+
+<div class="about-us-container">
+  <!-- Header -->
+  <header class="about-us-header">
+    <h1>About Us</h1>
+    <p>
+      We are a passionate team dedicated to bridging communication gaps between hearing and non-hearing communities. Our platform empowers individuals to learn and translate sign language easily and effectively.
+    </p>
+  </header>
+
+  <!-- Mission Section -->
+  <section class="section mission">
+    <h2>Our Mission</h2>
+    <p>
+     <i> At Scriptly, our mission is to break down communication barriers and foster inclusivity by providing intuitive, accessible tools for learning and translating sign language. We aim to empower individuals, educators, and communities through innovative technology, cutting-edge AI, and human-centered design. By bridging the gap between hearing and non-hearing communities, we strive to create a world where everyone can connect effortlessly, regardless of their communication style.</i>
+    </p>
+    <p>
+    <i>  We are committed to continuous improvement, collaboration, and empathy, ensuring our platform adapts to the evolving needs of our users and promotes a culture of understanding and respect.</i>
+    </p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <p class="team-subtitle">
+      Behind Scriptly is a passionate team of storytellers, technologists, and dreamers.
+    </p>
+   <div class="team-cards">
+  <div class="team-card">
+    <div class="card-top">
+      <img src="assets/images/Hussain.jpeg" alt="Hussain Abedin" />
+      <div class="overlay"></div>
+      <div class="member-info">
+        <h3>Hussain</h3>
+        <p class="role">Backend Developer</p>
+      </div>
+    </div>
+    <div class="card-bottom">
+      <p>
+        Hussain is a skilled Backend Developer who specializes in building robust, scalable server-side applications. He ensures seamless data flow and efficient system architecture behind every project.
+      </p>
+    </div>
+  </div>
+
+  <div class="team-card">
+    <div class="card-top">
+      <img src="assets/images/Mustafa.jpeg" alt="Mustafa Zohair" />
+      <div class="overlay"></div>
+      <div class="member-info">
+        <h3>Mustafa Zohair</h3>
+        <p class="role">Full Stack Developer</p>
+      </div>
+    </div>
+    <div class="card-bottom">
+      <p>
+        Mustafa is a versatile Full Stack Developer who bridges front-end elegance with back-end power. His end-to-end development skills bring complete and polished digital solutions to life.
+      </p>
+    </div>
+  </div>
+
+  <div class="team-card">
+    <div class="card-top">
+      <img src="assets/images/haider.jpeg" alt="Haider Ali" />
+      <div class="overlay"></div>
+      <div class="member-info">
+        <h3>Haider Ali</h3>
+        <p class="role">AI/ML Enthusiast</p>
+      </div>
+    </div>
+    <div class="card-bottom">
+      <p>
+        Haider Ali is an enthusiastic AI/ML innovator focused on building intelligent systems. His curiosity and expertise drive data-driven solutions that power the future of smart technology.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Core Values -->
+  <section class="section values">
+    <h2>Our Core Values</h2>
+    <ul class="values-list">
+      <li>Inclusivity</li>
+      <li>Innovation</li>
+      <li>Accessibility</li>
+      <li>Collaboration</li>
+      <li>Empathy</li>
+    </ul>
+  </section>
+<!-- Contact Section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+
+<section class="section contact">
+  <h2 class="contact-heading"><i class="fas fa-envelope-open-text"></i> Get in Touch</h2>
+  <p class="contact-subheading">We're here to help and answer any question you might have. We look forward to hearing from you 😊</p>
+  
+  <div class="contact-wrapper">
+    <!-- Info Side -->
+    <div class="contact-info">
+      <p>
+        <i class="fas fa-info-circle"></i> Have questions or feedback? We'd love to hear from you! <br><br>
+        <i class="fas fa-envelope"></i> Email: <em>contactsignlang.com</em> <br><br>
+        <i class="fas fa-phone"></i> Phone: +92 300 1234567 <br><br>
+        <i class="fas fa-map-marker-alt"></i> Address: 123 Main Street, Lahore, Pakistan
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="#" method="POST" novalidate>
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Name <span>*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+          pattern="[A-Za-z\s]+"
+          title="Only letters allowed"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email <span>*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        />
+      </div>
+
+
+      <div class="form-group">
+        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Subject (optional)"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message"><i class="fas fa-comment-dots"></i> Message <span>*</span></label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+          maxlength="500"
+          oninput="document.getElementById('charCount').textContent = this.value.length + '/500';"
+          required
+        ></textarea>
+        <small id="charCount" style="color: #555;">0/500</small>
+      </div>
+      <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+</section>

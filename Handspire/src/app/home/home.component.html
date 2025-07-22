@@ -1,0 +1,120 @@
+<app-navbar></app-navbar>
+
+<!-- HERO SECTION -->
+<section class="home-hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Empowering Communication with <span>EchoSign</span></h1>
+    <p class="hero-subtitle">Real-time ASL detection & video chat for the Deaf and Hard of Hearing</p>
+    <div class="hero-buttons">
+      <button class="primary-btn" (click)="startNow()">Start Detecting</button>
+      <button class="secondary-btn" (click)="getToAbout()">Learn More</button>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/press_start.PNG" alt="ASL Detection">
+  </div>
+</section>
+
+<!-- WHERE IT HELPS SECTION -->
+<section class="impact">
+  <h2 class="section-title">Where EchoSign Helps</h2>
+  <div class="impact-grid">
+    <div class="impact-card"><h4>🎓 Education</h4><p>Inclusive classrooms & better participation.</p></div>
+    <div class="impact-card"><h4>🏥 Healthcare</h4><p>Better doctor-patient communication.</p></div>
+    <div class="impact-card"><h4>💼 Business</h4><p>Inclusive meetings & collaboration.</p></div>
+    <div class="impact-card"><h4>🏠 Daily Life</h4><p>Bridge conversations with family & friends.</p></div>
+    <div class="impact-card"><h4>🌐 Social Media</h4><p>Sign language in streams & posts.</p></div>
+    <div class="impact-card"><h4>🎤 Events</h4><p>Conferences, workshops & live talks.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2 class="section-title">What Our Users Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <img src="assets/images/Client1.jpg" alt="Sara">
+      <p>“EchoSign made online classes interactive.”</p>
+      <strong>– Harry, CEO Microsoft</strong>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/images/Client2.jpg" alt="Ahmed">
+      <p>“Helps me explain to my doctor clearly!”</p>
+      <strong>– Warqah, Patient</strong>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/images/Client3.jpg" alt="John">
+      <p>“We use EchoSign in meetings. It's seamless.”</p>
+      <strong>– Anny, Senior Manager</strong>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top-bar"></div>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img style="width: 300px; height: 100px;" src="assets/images/Loo.png" alt="EchoSign Logo" />
+      <p>Empowering communication for everyone, everywhere.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Quick Links</h4>
+        <a (click)="getToAbout()">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Features</h4>
+        <a href="#">ASL Detection</a>
+        <a href="#">Video Chat</a>
+        <a href="#">Accessibility</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+         <a href="#"><i class="fab fa-instagram"></i> LinkedIn</a>
+         
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 EchoSign. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!-- CHATBOT FLOATING BUTTON & BOX -->
+<div class="chatbot-wrapper">
+  <!-- Show this button only when chat is closed -->
+  <div class="chat-toggle" *ngIf="!isChatOpen" (click)="toggleChat()">
+    <span>💬 Need Help?</span>
+  </div>
+
+  <!-- Chat window -->
+  <div class="chat-popup" *ngIf="isChatOpen">
+    <div class="chat-header-bar">
+      <span>🤖 Handspire Assistant</span>
+      <button class="close-btn" (click)="toggleChat()">×</button>
+    </div>
+
+    <div class="chat-message-area">
+      <div *ngFor="let msg of messages">
+        <div [ngClass]="msg.sender === 'user' ? 'chat-bubble user' : 'chat-bubble bot'">
+          {{ msg.text }}
+        </div>
+      </div>
+    </div>
+
+    <form (submit)="sendMessage()" class="chat-input-row">
+      <input type="text" [(ngModel)]="userInput" name="userInput" placeholder="👋 Ask me anything..." required />
+      <button type="submit">➤</button>
+    </form>
+  </div>
+</div>
+

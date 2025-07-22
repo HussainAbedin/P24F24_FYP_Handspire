@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<div class="hand-detection-page">
+  <div class="page-header">
+    <h2 class="main-title">Hand Gesture Recognition Dashboard</h2>
+    <p class="subtitle">Real-time gesture to text & speech translation</p>
+  </div>
+
+  <div class="detection-layout">
+    <!-- A-Z Gesture Card -->
+    <div class="card">
+      <h3>A-Z Gesture</h3>
+      <video #azVideo autoplay muted playsinline></video>
+      <div class="button-group">
+        <button (click)="startAzCamera()" [disabled]="azCameraStarted">Start Camera</button>
+        <button (click)="stopAzCamera()" [disabled]="!azCameraStarted">Stop Camera</button>
+        <button (click)="captureAndDetect()" [disabled]="!azCameraStarted">Capture</button>
+      </div>
+      <div *ngIf="isLoadingAz" class="spinner">Loading...</div>
+    </div>
+
+    <!-- Sentence Gesture Card -->
+    <div class="card">
+      <h3>Sentence Detection</h3>
+      <video #sentenceVideo autoplay muted playsinline></video>
+      <div class="button-group">
+        <button (click)="startSentenceCamera()" [disabled]="sentenceCameraStarted">Start Camera</button>
+        <button (click)="stopSentenceCamera()" [disabled]="!sentenceCameraStarted">Stop Camera</button>
+        <button (click)="captureImageSequence()" [disabled]="!sentenceCameraStarted || capturing">
+          {{ capturing ? 'Capturing...' : 'Capture Sentence' }}
+        </button>
+      </div>
+      <div *ngIf="capturing" class="info">Please hold still...</div>
+    </div>
+
+    <!-- Prediction Card -->
+    <div class="card result-card">
+      <h3>Prediction</h3>
+      <img *ngIf="capturedImage" [src]="capturedImage" class="preview-img" />
+      <div *ngIf="prediction"><strong>A-Z:</strong> {{ prediction }}</div>
+      <div *ngIf="sentenceResult">
+        <strong>Sentence:</strong> {{ sentenceResult.prediction }}<br />
+        <strong>Confidence:</strong> {{ sentenceResult.confidence | percent: '1.1-2' }}
+      </div>
+      <div class="button-group" style="margin-top: 10px;">
+        <button (click)="resetAll()">Reset All</button>
+      </div>
+    </div>
+
+    <!-- History Card -->
+    <div class="card history-card" *ngIf="history.length">
+      <h3>History</h3>
+      <div class="history-items">
+        <div class="history-item" *ngFor="let item of history">
+          <img [src]="item.image" />
+          <p>{{ item.prediction }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

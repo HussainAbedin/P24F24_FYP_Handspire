@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<div class="video-chat-page">
+  <h2 class="page-title">📹 Real-Time Video Chat</h2>
+
+  <!-- Status -->
+  <div class="connection-status">
+    <span class="status-label">Status:</span>
+    <span class="status-value" [class]="connectionStatus.toLowerCase()">{{ connectionStatus }}</span>
+  </div>
+
+  <!-- Videos -->
+  <div class="video-grid">
+    <div class="video-card">
+      <h3>My Camera</h3>
+      <video #localVideo autoplay muted playsinline></video>
+    </div>
+    <div class="video-card">
+      <h3>Partner</h3>
+      <video #remoteVideo autoplay playsinline></video>
+    </div>
+  </div>
+
+  <!-- ✅ Gesture Chat Box -->
+  <div class="chat-box">
+    <div class="messages">
+      <div *ngFor="let msg of messages" class="message">
+        <strong>{{ msg.sender }}:</strong> {{ msg.text }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button *ngIf="!roomId" (click)="createRoom()">Create Session</button>
+<button *ngIf="roomId" (click)="endCall()" class="end-call-btn">End Call</button>
+
+    <div *ngIf="isCaller && roomId" class="room-id">
+      Room ID: <strong>{{ roomId }}</strong>
+      <button (click)="copyRoomId()">Copy</button>
+    </div>
+
+    <div class="join-section" *ngIf="!isCaller">
+      <input [(ngModel)]="roomId" placeholder="Enter Room ID to Join" />
+      <button (click)="joinRoom()" [disabled]="!roomId.trim()">Join Session</button>
+    </div>
+
+    <button *ngIf="roomId" (click)="debugConnection()" class="debug-btn">Debug Connection</button>
+  </div>
+</div>

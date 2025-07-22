@@ -1,0 +1,89 @@
+/* About-ASL Page Specific Styling */
+.about-asl-page {
+  background-color: #ecf0f1; /* Soft light gray background to keep it neutral */
+  padding: 20px;
+  height: 82.5vh; /* Ensure it takes the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About-ASL Container Styling */
+.about-asl-container {
+  background: #ffffff; /* Clean white background for inner container */
+  color: #34495e; /* Dark gray text for readability */
+  padding: 25px 20px; /* Slightly smaller padding */
+  max-width: 700px; /* Set max-width for a more compact layout */
+  border-radius: 8px; /* Rounded corners for modern look */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Softer, subtle shadow */
+  font-family: 'Arial', sans-serif; /* Clean, simple font */
+  overflow: hidden; /* Prevent overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Heading Styling */
+.about-asl-container h1 {
+  font-size: 28px; /* Appropriate font size */
+  font-weight: 600;
+  color: #2980b9; /* Blue color for heading */
+  margin-bottom: 15px; /* Adequate space below heading */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Paragraph Styling */
+.about-asl-container p {
+  font-size: 16px; /* Standard font size for readability */
+  margin-bottom: 20px; /* Space between paragraphs */
+  color: #151818; /* Soft dark gray for paragraphs */
+  line-height: 1.6; /* Proper line-height for readability */
+}
+
+/* Link Styling */
+.about-asl-container a {
+  color: #151818; ; /* Blue color for links */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.about-asl-container a:hover {
+  color: #3498db; /* Lighter blue on hover */
+  text-decoration: underline;
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Last Paragraph Specific Styling */
+.about-asl-container p:last-of-type {
+  font-size: 14px; /* Slightly smaller font size for the last paragraph */
+  text-align: center;
+  color: #95a5a6; /* Lighter gray for the last paragraph */
+}
+
+/* Hover and Active States */
+.about-asl-container:hover {
+  transform: translateY(-5px); /* Subtle lift for interactivity */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .about-asl-container {
+    padding: 20px 15px; /* Reduced padding for mobile */
+    margin: 10px auto; /* Adjusted margin for mobile */
+  }
+
+  .about-asl-container h1 {
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-bottom: 10px; /* Less margin for mobile */
+  }
+
+  .about-asl-container p {
+    font-size: 14px; /* Slightly smaller font on mobile */
+  }
+
+  .about-asl-container a {
+    font-size: 14px; /* Adjusted link size for mobile */
+  }
+}

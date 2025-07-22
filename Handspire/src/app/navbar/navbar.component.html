@@ -1,0 +1,17 @@
+<nav class="navbar">
+<div class="logo" (click)="gotoHome()">
+  <div class="logo-text-group">
+    <div class="logo-text">HANDSPIRE</div>
+    <div class="tagline">Bridging Signs & Speech</div>
+  </div>
+  <span class="sign-icon"><i class="fas fa-hand-paper"></i></span>
+</div>
+
+  <ul class="nav-links">
+    <li><a (click)="gotoAsl()">ASL Alphabets</a></li>
+    <li><a (click)="gotoAboutUs()">About Us</a></li>
+    <li><a (click)="gotoHandDetection()">Hand Detection</a></li>
+    <li><a (click)="gotoOurVision()">Vision</a></li>
+  </ul>
+  <button class="primary-btn cta-btn" (click)="startaCall()">Start a Call</button>
+</nav>

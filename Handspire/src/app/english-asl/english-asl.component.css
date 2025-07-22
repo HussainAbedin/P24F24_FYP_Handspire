@@ -1,0 +1,191 @@
+.page-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1E90FF; /* Bright blue color */
+  font-family: 'Pacifico', cursive; /* Bubble-like font */
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+ 
+}
+
+.page-heading:hover {
+  
+  color: #4682B4; /* Darker blue color on hover */
+}
+/* Overall container */
+
+.asl-container {
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Left section for displaying ASL images */
+  .asl-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .asl-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .asl-image-container {
+    width: calc(20% - 15px);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    aspect-ratio: 1; /* Ensures the box stays square */
+    height: 0; /* Prevents vertical stretching */
+    padding-top: 3%; /* Adjusts height based on the width (aspect ratio) */
+    min-height: 100px; /* Ensures the container has at least some height */
+  }
+  
+  .asl-image-container:hover {
+    transform: scale(1.1);
+  }
+  
+  .asl-image-container img {
+    width: 100%;
+    height: 100%; /* Makes sure the image fills the container */
+    object-fit: contain; /* Keeps the entire image visible */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .asl-image-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  /* Right section for keyboard and buttons */
+  .asl-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .asl-keyboard {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .asl-btn {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #ced4da;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .asl-btn:hover {
+    background-color: #ced4da;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .asl-btn:active {
+    background-color: #adb5bd;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .asl-btn:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+  }
+  
+  /* Control Buttons */
+  .control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .control-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .control-btn i {
+    font-size: 18px;
+  }
+  
+  .control-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .control-btn:active {
+    background-color: #004085;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .asl-container {
+      flex-direction: column;
+    }
+  
+    .asl-keyboard {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .asl-image-container {
+      width: calc(33.33% - 15px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .asl-keyboard {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .asl-image-container {
+      width: 100%;
+    }
+  }
+  
