@@ -91,3 +91,9 @@ Frontend Interface
 • Responsive and user-friendly UI
 
 📷 Screenshots / Demo
+==========================================
+
+![Gesture Detection](project_img_01.png)
+![Video Call](project_img_02.png)
+![Chatbot](project_img_03.png)
+![Model Training](project_img_04.png)
