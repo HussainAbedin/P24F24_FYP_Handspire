@@ -1,99 +1,93 @@
-🤟 Handspire - Bridging Silence with Technology
-Final Year Project | Department of Computer Science
-Team Lead: Hussain Abedin
-Team Members: Haider Ali,Mustafa Zohair
-Supervisor: Ms.Tehniat Mirza
-Session: 2021-2025
+# 🤟 Handspire - Bridging Silence with Technology  
+**Final Year Project | Department of Computer Science**  
+**Team Lead:** Hussain Abedin  
+**Team Members:** Haider Ali, Mustafa Zohair  
+**Supervisor:** Ms. Tehniat Mirza  
+**Session:** 2021–2025  
 
-Project Overview
-Handspire is an intelligent sign language translation system developed to bridge the communication gap between the hearing and speech-impaired community and the rest of the world. It primarily supports American Sign Language (ASL) and offers real-time translation of both alphabet gestures and conversational gestures.
+---
 
-Built with a modern and responsive Angular frontend, Handspire features custom-trained models, real-time video processing, and interactive chatbot support — making communication seamless, inclusive, and intelligent.
+## 📘 Project Overview
 
-🎯 Objectives
-To develop a system capable of translating ASL gestures (alphabets + common phrases).
+**Handspire** is an intelligent sign language translation system developed to bridge the communication gap between the hearing and speech-impaired community and the rest of the world.  
+It primarily supports **American Sign Language (ASL)** and offers translation of both **alphabet gestures** and **conversational gestures**.
 
-To provide a real-time gesture recognition feature during video calls.
+Built with a modern and responsive **Angular frontend**, Handspire features custom-trained models, real-time video processing, and chatbot support — making communication seamless, inclusive, and intelligent.
 
-To enable natural interaction using a chatbot explaining project modules, dataset, and technical components.
+---
 
-To build a custom dataset for gesture recognition, ensuring high accuracy and adaptability.
+## 🎯 Objectives
 
-To enhance inclusivity in digital communication through assistive AI technology.
+- To develop a system capable of translating **ASL gestures** (alphabets + common phrases).  
+- To provide a **real-time gesture recognition** feature during video calls.  
+- To enable **natural interaction** using a chatbot explaining project modules, dataset, and technical components.  
+- To build a **custom dataset** for gesture recognition, ensuring high accuracy and adaptability.
 
-🔧 Technologies Used
-Domain	Tools & Frameworks
-Frontend	Angular, TypeScript, Bootstrap
-Backend	Python, Flask/FastAPI
-Machine Learning	TensorFlow, Keras, OpenCV, MediaPipe
-Dataset	Custom-built ASL Gesture Dataset (Alphabet + Conversation)
-Realtime Communication	WebRTC
-Bot Interaction	Dialogflow / Custom NLP Chatbot
-Image Annotation	LabelImg, CVAT
+---
 
-✨ Key Features
-🧠 Custom Trained Model
-Built using our own dataset of ASL gestures.
+## 🔧 Technologies Used
 
-Includes both alphabet-based signs and common conversational phrases.
+| Domain | Tools & Frameworks |
+|--------|---------------------|
+| Frontend | Angular, TypeScript, Bootstrap |
+| Backend | Python, Flask/FastAPI |
+| Machine Learning | TensorFlow, Keras, OpenCV, MediaPipe |
+| Dataset Labeling | LabelImg, CVAT |
+| Real-Time Communication | WebRTC |
+| Chatbot | Dialogflow / Custom NLP Bot |
+| Model Types | CNN for static signs, LSTM for dynamic gestures |
 
-📸 Real-Time Gesture Recognition
-Recognizes hand gestures via webcam using OpenCV + MediaPipe.
+---
 
-Supports live translation during video calls using WebRTC.
+## ✨ Key Features
 
-💬 Interactive Chatbot
-Ask anything about:
+### 📸 Real-Time Gesture Recognition
+- Detects ASL signs through webcam using **OpenCV** and **MediaPipe**.  
+- Recognizes both static (alphabets) and dynamic (conversational) gestures.
 
-The dataset
+### 🔄 Real-Time Translation During Video Call
+- Integrates **WebRTC** to allow two users to video call.  
+- One user's signs are translated and displayed to the other in real-time.
 
-Model architecture
+### 💬 Project Chatbot
+- Users can interact with a chatbot to learn about:
+  - Dataset
+  - Model architecture
+  - Project goals
+  - Technical stack
+  - Live demo instructions
 
-Project goals
+### 📁 Custom Dataset
+- Over **X,000 images** captured in multiple conditions.  
+- Covers alphabets and conversational gestures.  
+- Data annotated using **LabelImg** and **CVAT** tools.  
+- Dynamic gestures trained using **LSTM**.
 
-Feature demonstrations
+---
 
-Available 24/7 within the platform.
+## 🧪 Project Modules Breakdown
 
-📞 Video Call with Gesture Translation
-Initiate a peer-to-peer video call.
-
-One user can sign using ASL; the system detects and translates gestures on the receiver’s screen in real-time.
-
-🧪 Dataset Overview
-Over X,000 images collected manually.
-
-Multiple lighting conditions, backgrounds, and hand orientations included.
-
-Labeled using tools like LabelImg and CVAT.
-
-Trained on Convolutional Neural Network (CNN) architectures.
-
-For conversational signs, LSTM was used to capture motion-based sequences.
-
-🔍 Project Modules
-mathematica
-Copy
-Edit
 Level 1: Data & Computer Vision
-- Image annotation
-- Dataset training
-- Hand detection (MediaPipe, OpenCV)
+• Image annotation
+• Custom dataset creation
+• Hand detection using MediaPipe
 
 Level 2: Sign Language Translation
-- Alphabet gestures (Static)
-- Conversational gestures (Dynamic via LSTM)
+• Alphabet gestures (Static - CNN)
+• Conversational gestures (Dynamic - LSTM)
 
 Level 3: Real-Time Communication
-- Webcam streaming
-- WebRTC-based video calling
-- On-stream hand translation
+• Webcam gesture streaming
+• Video calling using WebRTC
+• Real-time gesture translation overlay
 
-Level 4: Chatbot Interaction
-- NLP/FAQ chatbot
-- Project information, guidance, and tech stack
+Level 4: AI Chatbot Integration
+• Chatbot for project Q&A
+• NLP for chatbot responses
+• Frontend integration
 
-Frontend: User Interface
-- Built in Angular with responsive design
+Frontend Interface
+• Built with Angular
+• Responsive and user-friendly UI
 
-Screenshots / Demo:
+📷 Screenshots / Demo
