@@ -104,7 +104,7 @@ How to Run:
 Clone the repository
 git clone https://github.com/your-username/handspire.git
 
-Navigate to frontend directory
+# Navigate to frontend directory
 cd Handspire
 ng serve -o
 
