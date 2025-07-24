@@ -101,17 +101,19 @@ Frontend Interface
 
 How to Run:
 ======================================
-# Clone the repository
+Clone the repository
 git clone https://github.com/your-username/handspire.git
 
-# Navigate to frontend directory
+Navigate to frontend directory
 cd Handspire
 ng serve -o
 
 # Navigate to backend directories
 cd Handspire_Sentence_Api
+
 cd Chatbot_Handspire
-cs RealTime_Sentence_Api
+
+cd RealTime_Sentence_Api
 
 pip install -r requirements.txt
 python app.py
