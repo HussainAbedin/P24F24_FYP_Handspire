@@ -95,7 +95,7 @@ Frontend Interface
 
 ![Gesture Detection](project_img_01.png)
 ![Video Call](project_img_02.png)
-![Chatbot](project_img_03.png)
+![Chatbot](project_img_0.png)
 ![Model Training](project_img_04.png)
 ![VideoCallFeature](project_img_05.png)
 
