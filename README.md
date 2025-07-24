@@ -98,3 +98,28 @@ Frontend Interface
 ![Chatbot](project_img_03.png)
 ![Model Training](project_img_04.png)
 ![VideoCallFeature](project_img_05.png)
+
+How to Run:
+======================================
+# Clone the repository
+git clone https://github.com/your-username/handspire.git
+
+# Navigate to frontend directory
+cd Handspire
+ng serve -o
+
+# Navigate to backend directories
+cd Handspire_Sentence_Api
+cd Chatbot_Handspire
+cs RealTime_Sentence_Api
+
+pip install -r requirements.txt
+python app.py
+
+After Run all three API's your project is completely setup,you good to go to run the project successfully.
+
+📬 Contact
+=============
+For queries or collaborations:
+📧 Email: hussainabedin54@gmail.com
+
